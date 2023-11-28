@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-if number > 0:
-    trailNum = number % 10
+if number >= 0:
+    trailNum = (number % 10)
 elif number < 0:
-    trailNum = number % -10
+    trailNum = (number % -10)
 if trailNum > 5:
     print(f"Last digit of {number} is {trailNum} and is greater than 5")
 elif trailNum == 0:
