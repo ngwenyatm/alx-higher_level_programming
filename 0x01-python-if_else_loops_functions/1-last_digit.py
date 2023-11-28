@@ -6,9 +6,9 @@ if number > 0:
 elif number < 0:
     trailNum = number % -10
 if trailNum > 5:
-    print(f"Last digit of {number} is {last_num} and is greater than 5")
+    print(f"Last digit of {number} is {trailNum} and is greater than 5")
 elif trailNum == 0:
-    print(f"Last digit of {number} is {last_num} and is 0")
+    print(f"Last digit of {number} is {trailNum} and is 0")
 else:
-    print(f"Last digit of {number} is {last_num} and is less than 6 and not 0")
+    print(f"Last digit of {number} is {trailNum} and is less than 6 and not 0")
 
