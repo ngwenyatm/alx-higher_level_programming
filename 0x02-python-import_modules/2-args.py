@@ -11,8 +11,8 @@ if __name__ == "__main__":
         print("{} arguments:".format(argNum))
 
     if argNum >= 1:
-        i = 0
+        argNum = 0
         for arg in sys.argv:
-            if i != 0:
+            if argNum != 0:
                 print("{}: {}".format(i, arg))
             i += 1
