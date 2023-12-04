@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
-   str_len = len(sentence)
-    fchar = sentence[0]
-    if str_len > 0 else "None"
-    retup = str_len, fchar
-    return(retup)
+    if not sentence:
+        sentence = None
+    if sentence:
+        lenofsen = len(sentence)
+    else:
+        lenofsen = 0
+    mul = (lenofsen, sentence if not sentence else sentence[:1])
+    return mul
