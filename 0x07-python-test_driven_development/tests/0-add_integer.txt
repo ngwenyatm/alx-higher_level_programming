@@ -1,0 +1,86 @@
+Testing 0-add_integer.py
+======================
+
+NormalUsage
+-----------
+
+        >>> add_integer = __import__("0-add_integer").add_integer
+
+Testing normal use:
+         >>> add_integer(5, 5)
+         10
+
+Testing negative to positive addition:
+         >>> add_integer(-5, 5)
+         0
+
+Testing adding positive number to negative one:
+         >>> add_integer(5, -5)
+         0
+
+
+testing float added to int:
+         >>> add_integer(5.2, 5)
+         10
+
+Testing if both args are float:
+         >>> add_integer(5.3, 5.2)
+         10
+
+testing int added with float:
+         >>> add_integer(5, 5.2)
+         10
+
+
+Non-Number addition:
+-------------------
+
+Test if no args are given:
+         >>> add_integer()
+         Traceback (most recent call last):
+         TypeError: 2 arguments required: 'a' and 'b'
+
+Test for NaN:
+         >>> add_integer(5, float('nan'))
+         Traceback (most recent call last):
+         ValueError: can't convert NaN to int
+
+Test non-number to number addition:
+         >>> add_integer(5, [5])
+         Traceback (most recent call last):
+         TypeError: a should be an int
+
+Testing number to non-number addition:
+         >>> add_integer(5, "5")
+         Traceback (most recent call last):
+         TypeError: b should be an int
+
+Testing non-number addition:
+         >>> add_integer((2,), {"key": "value"})
+         Traceback (most recent call last):
+         TypeError: a shouuld be an int
+
+Test bool added to number:
+         >>> add_integer(True, 1)
+         Traceback (most recent call last):
+         TypeError: a should  be an int
+
+test if number added to a bool:
+         >>> add_integer(5, False)
+         Traceback (most recent call last):
+         TypeError: b should be an int
+
+Test if only one arg:
+         >>> add_integer(1)
+         Traceback (most recent call last):
+         TypeError: missing 1 argument: 'b'
+
+Test if  more than 2 args:
+         >>> add_integer(1, 2, 3)
+         Traceback (most recent call last):
+         TypeError: Takes 2 args but more were input
+
+Testing if infinity is used:
+         >>> add_integer(5, float('inf'))
+         Traceback (most recent call last):
+         OverflowError: cannot convert infinity to int
