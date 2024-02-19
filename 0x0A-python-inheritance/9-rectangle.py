@@ -2,24 +2,17 @@
 """class Rectangle inherited from BaseGeometry."""
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-
 class Rectangle(BaseGeometry):
-    """Represent a rectangle using BaseGeometry class."""
-
     def __init__(self, width, height):
-        """Intialize new Rectangle.
-        """
-        super().integer_validator("height", height)
-        self.__height = height
-        super().integer_validator("width", width)
-        self.__width = width
+        super().__init__()
+        self.__width = integer_validator("width", width)
+        self.__height = integer_validator("height", height)
 
     def area(self):
-        """Return area."""
         return self.__width * self.__height
 
     def __str__(self):
-        """Return print() and str()."""
-        pstr = "[" + str(self.__class__.__name__) + "] "
-        pstr += str(self.__width) + "/" + str(self.__height)
-        return pstr
+        return f"[Rectangle] {self.__width}/{self.__height}"
+
+    def __repr__(self):
+        return f"Rectangle({self.__width}, {self.__height})"
