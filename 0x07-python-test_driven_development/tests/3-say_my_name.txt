@@ -1,0 +1,40 @@
+Testing 3-say_my_name.py
+=========================
+
+ ``say_my_name(first_name, last_name="")``.
+
+Regular usage
+=============
+
+Importing function:
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("Thabiso", "Ngwenya")
+    My name is Thabiso Ngwenya
+
+
+Testing if second arg isn't given:
+    >>> say_my_name("John")
+    My name is John
+
+Invalid Names
+=============
+
+Testing if both args are strings:
+
+    >>> say_my_name(6, "doe")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    >>> say_my_name("john", ["john", 2])
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+    >>> say_my_name({"John": 23}, 5)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+Testing if there are no args input:
+
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: There should be at least one arg given
